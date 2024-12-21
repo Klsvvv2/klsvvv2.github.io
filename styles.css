@@ -1,0 +1,103 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #f0f8ff, #e6e6fa);
+    color: #333;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#result-message {
+    color: #28a745;
+    font-weight: bold;
+}
+
+#inventory {
+    margin-top: 30px;
+}
+
+#inventory-list {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Уведомление о повышении уровня */
+.level-up {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #4caf50;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    z-index: 1000;
+    animation: fadeInOut 3s forwards;
+}
+
+/* Скрытый элемент */
+.hidden {
+    display: none;
+}
+
+/* Анимация появления и исчезновения */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    20%, 80% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+}
+
+.box img[src="https://i.ytimg.com/vi/OU919c0TXVA/maxresdefault.jpg"] {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

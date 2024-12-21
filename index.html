@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Симулятор открытия коробок</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="level-up-notification" class="level-up hidden">🎉 Уровень повышен! 🎉</div>
+    <div class="container text-center my-5">
+        <h1 class="mb-4">Симулятор открытия коробок</h1>
+        <p class="lead">Открывай коробки, собирай награды и повышай уровень!</p>
+
+        <!-- Уровень игрока -->
+        <div class="my-3">
+            <h3>Уровень: <span id="level">1</span></h3>
+            <p>Опыт: <span id="xp">0</span> / <span id="xp-to-next">100</span></p>
+        </div>
+
+
+
+        <!-- Игровая зона -->
+        <div id="game-area" class="d-flex justify-content-center flex-wrap gap-4 mt-4">
+            <div class="box" data-name="Коробка Обычная" onclick="openBox('Коробка Обычная')">
+                <img src="https://static.vecteezy.com/system/resources/previews/019/638/570/original/cardboard-box-brown-free-png.png" alt="Коробка Обычная">
+            </div>
+            <div class="box" data-name="Коробка Редкая" onclick="openBox('Коробка Редкая')">
+                <img src="https://www.kindpng.com/picc/m/485-4859470_box-png-transparent-png.png" alt="Коробка Редкая">
+            </div>
+            <div class="box" data-name="Коробка Суперская" onclick="openBox('Коробка Суперская')">
+                <img src="https://steamuserimages-a.akamaihd.net/ugc/937215911995919177/65730AB3C00170260F6D0EFA4489C28CDB635B97/?imw=512&amp;&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=false" alt="Коробка Суперская">
+            </div>
+            <div class="box" data-name="Мистический Танковый контейнер" onclick="openBox('Мистический Танковый контейнер')">
+            <img src="https://i.ytimg.com/vi/OU919c0TXVA/maxresdefault.jpg" alt="Мистический Танковый контейнер">
+        </div>
+
+        </div>
+
+        <!-- Результат -->
+        <div id="result-area" class="mt-4">
+            <h3 id="result-message"></h3>
+        </div>
+
+        <!-- Инвентарь -->
+        <div id="inventory" class="mt-5">
+            <h2>Мой инвентарь</h2>
+            <ul id="inventory-list" class="list-group"></ul>
+        </div>
+    </div>
+
+    <!-- Звуки -->
+    <audio id="open-sound" src="open.mp3"></audio>
+    <audio id="reward-sound" src="reward.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
